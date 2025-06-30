@@ -1,0 +1,537 @@
+@font-face { /* подключение шрифтов */
+    font-family: 'Kreadon';
+    src: url('fonts/ofont.ru_Kreadon.ttf') format('ttf');
+    font-weight: 400;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Bryndan Write';
+    src: url('fonts/ofont.ru_Bryndan Write.ttf') format('ttf');
+    font-weight: 400;
+    font-style: normal;
+}
+*{ /* определение общих стилей */
+    margin: 0;
+    padding: 0;
+}
+body {
+    color: #000;
+    line-height: 1.6;
+}
+html {
+    overflow-y: scroll;
+}
+
+.container { /* стили для контейнеров */
+    max-width: 1300px;
+    margin: 0 auto;
+    padding: 20px;
+}
+.container-2 {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.header { /* стили для шапки сайта */
+    background-color: #BB3D85;
+    color: white;
+}
+.header__content {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    flex-direction: row;
+    gap: 120px;
+}
+.menu {
+    margin-right: 300px;
+}
+.menu__link {
+    color: white;
+    text-decoration: none;
+    font-family: Kreadon;
+    font-size: 18px;
+}
+
+.auth-block { /* стили для блока навигации (слева на главной странице) */
+    position: absolute;
+    left: 100px;
+}
+.btn a {
+    text-decoration: none;
+    color: white;
+}
+.auth {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 10px;
+    background-color: #FFC1C3;
+    width: 200px;
+    height: 130px;
+    justify-content: center;
+    gap: 10px;
+}
+.auth p {
+    font-family: Kreadon;
+    font-weight: bold;
+}
+.btn {
+    background: #BB3D85;
+    color: white;
+    padding: 8px 12px;
+    border: none;
+    cursor: pointer;
+    font-family: Kreadon;
+    font-size: 12px;
+    width: 150px;
+}
+.entr {
+    display: none;
+}
+.admin {
+    background: black;
+    color: white;
+}
+.admin-panel {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+    background-color: #D8D8D8;
+    width: 200px;
+    height: 60px;
+    justify-content: center;
+}
+
+h1 { 
+    text-align: center;
+    margin-bottom: 20px;
+    font-family: Kreadon;
+    font-weight: 700;
+    font-size: 28px;
+}
+
+.about p {
+    max-width: 730px;
+    margin: 10px auto;
+    text-align: center;
+    font-family: Kreadon;
+    font-size: 20px;
+    margin-bottom: 40px;
+}
+
+.line { /* стили для линий на сайте */
+    display: flex;
+    justify-content: center;
+}
+hr {
+    width: 800px;
+    height: 1px;
+    background-color: #000;
+    border: none;
+    margin-bottom: 40px;
+}
+
+.why-us__content { /* стили для блока "Почему выбирабт нас" на главной странице */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
+    margin-bottom: 50px;
+}
+.why-us__block {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    align-items: center;
+}
+.why-us__block img {
+    max-width: 370px;
+    height: auto;
+}
+.why-us__block p {
+    flex: 1;
+    text-align: right;
+    font-family: Kreadon;
+    font-size: 20px;
+    max-width: 350px;
+}
+.second p {
+    text-align: left;
+    font-family: Kreadon;
+    font-size: 20px;
+}
+
+.footer { /* стиль для подвала сайта */
+    font-family: 'Bryndan Write';
+    background: black;
+    color: #F5CB70;
+    text-align: center;
+    padding: 20px;
+}
+
+.standart-block p { /* стили для блоков информации */
+    max-width: 730px;
+    margin: 10px auto;
+    text-align: center;
+    font-family: Kreadon;
+    font-size: 20px;
+    margin-bottom: 40px;
+}
+.standart-block {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.form-block { /* стили для форм сайта */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 10px;
+    background-color: #FFC1C3;
+    width: 700px;
+    height: 300px;
+    justify-content: center;
+    gap: 50px;
+    margin-bottom: 40px;
+}
+.form-block input {
+    width: 500px;
+    height: 50px;
+    font-family: Kreadon;
+    font-size: 18px;
+    padding-left: 20px;
+}
+.form-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.finish {
+    width: 500px;
+    height: 70px;
+    border: none;
+    background-color: #F5CB70;
+    font-family: Kreadon;
+    font-size: 20px;
+    font-weight: 700;
+    margin-bottom: 60px;
+    cursor: pointer;
+}
+
+.form-reg { /* стили для формы регистрации */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 10px;
+    background-color: #FFC1C3;
+    width: 700px;
+    height: 600px;
+    justify-content: center;
+    gap: 50px;
+    margin-bottom: 40px;
+}
+.form-reg input {
+    width: 500px;
+    height: 50px;
+    font-family: Kreadon;
+    font-size: 18px;
+    padding-left: 20px;
+}
+.form-admin { /* стили для административной панели */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 10px;
+    background-color: #D8D8D8;
+    width: 700px;
+    height: 1350px;
+    justify-content: center;
+    gap: 5px;
+    margin-bottom: 40px;
+}
+.admin-in input {
+    width: 500px;
+    height: 50px;
+    font-family: Kreadon;
+    font-size: 18px;
+    padding-left: 20px;
+}
+.admin-in select {
+    width: 525px;
+    height: 60px;
+    font-family: Kreadon;
+    font-size: 18px;
+    padding-left: 20px;
+}
+.adminp p {
+    max-width: 730px;
+    margin: 10px auto;
+    text-align: left;
+    font-family: Kreadon;
+    font-size: 20px;
+}
+.admin-act {
+    display: flex;
+    margin-top: 20px;
+    align-items: center;
+    gap: 10px;
+}
+.admin-act input {
+    width: 200px;
+    height: 60px;
+    border: none;
+    background-color: #000;
+    color: white;
+    font-family: Kreadon;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.enter-question { /* стили для страницы обратной связи */
+    width: 500px;
+    height: 150px;
+    font-family: Kreadon;
+    font-size: 18px;
+    padding-left: 20px;
+    padding-top: 20px;
+    resize: none;
+}
+.form-call { 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 10px;
+    background-color: #FFC1C3;
+    width: 700px;
+    height: 600px;
+    justify-content: center;
+    gap: 50px;
+    margin-bottom: 40px;
+}
+.form-nonspecial {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 10px;
+    justify-content: center;
+    gap: 50px;
+}
+.form-nonspecial input {
+    width: 500px;
+    height: 50px;
+    font-family: Kreadon;
+    font-size: 18px;
+    padding-left: 20px;
+}
+.contacts {
+    font-family: Kreadon;
+    background: #D8D8D8;
+    text-align: center;
+    padding: 20px;
+}
+.contacts-all {
+    font-family: Kreadon;
+    font-size: 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 170px;
+    margin-top: 40px;
+    margin-bottom: 30px;
+    margin-right: 30px;
+}
+.account-info p { 
+    max-width: 730px;
+    margin: 10px auto;
+    text-align: center;
+    font-family: Kreadon;
+    font-size: 20px;    
+}
+.account-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.account-info button { 
+    width: 230px;
+    height: 60px;
+    margin: 10px auto;
+    align-items: center;
+    font-family: Kreadon;
+    font-size: 20px;
+}
+.standart-block h3 {
+    text-align: center;
+    margin-bottom: 20px;
+    margin-top: 40px;
+    font-family: Kreadon;
+}
+
+.form-account { /* стили для формы записи */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 10px;
+    background-color: #FFC1C3;
+    width: 700px;
+    height: 550px;
+    justify-content: center;
+    gap: 20px;
+    margin-bottom: 40px;
+}
+.accountp p {
+    max-width: 730px;
+    margin: 10px auto;
+    text-align: left;
+    font-family: Kreadon;
+    font-size: 20px;
+}
+.admin-in-2 input {
+    width: 80px;
+    height: 50px;
+    font-family: Kreadon;
+    font-size: 18px;
+    background-color: white;
+    cursor: pointer;
+    margin-right: 10px;
+}
+.admin-in-2 {
+    width: 520px;
+}
+.add-a.active {
+    background-color: #333;
+    color: #fff;
+    border: 5px solid #333;
+}
+
+.master-block {
+    display: flex;
+    flex-direction: row;
+}
+.line-m { /* стили для линий на странице мастеров */
+    display: flex;
+    justify-content: center;
+}
+.line-m hr {
+    width: 800px;
+    height: 1px;
+    background-color: #000;
+    border: none;
+    margin-bottom: 40px;
+}
+.line-m:last-of-type {
+    display: none;
+}
+
+.standart-block2 { /* стили для блоков информации */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.standart-block2 p {
+    max-width: 730px;
+    margin: 10px auto;
+    text-align: left;
+    font-family: Kreadon;
+    font-size: 18px;
+    margin-left: 10px;
+    width: 600px;
+    margin-bottom: 50px;
+}
+.standart-block2 h2 { 
+    text-align: left;
+    margin-bottom: 10px;
+    font-family: Kreadon;
+    margin-left: 10px;
+}
+
+.hint-text { 
+    width: 330px;
+    text-align: center;
+}
+.hint { /* стиль для окна подсказки */
+    position: fixed;
+    top: 20%;
+    left: 20%;
+    width: 380px;
+    height: 128px;
+    background: #000 0% 0% no-repeat padding-box;
+    border-radius:24px;
+
+    font-family: Kreadon;
+    font-size: 18px;
+    font-weight: 700;
+    color: #F5CB70;
+    text-transform: uppercase;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: translateX(-200%);
+    opacity: 0;
+}
+.hint.animate { /* стиль для вызова анимации */
+    animation: act 6s forwards;
+    opacity: 1;
+}
+@keyframes act { /* анимация для подсказок */
+    0% {
+        transform: translateX(-200%);
+        opacity: 0;
+    }
+    30% {
+        transform: translateX(-50%);
+        opacity: 1;
+    }
+    75% {
+        transform: translateX(-50%);
+        opacity: 1;
+    }
+    100% {
+        transform: translateX(-200%);
+        opacity: 0;
+    }
+}
+.service-im h2 {
+    margin-left: 30px;
+}
+
+.presses {  /* стиль для блока кнопок представлений */
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 30px;
+}
+.presses input {  /* стиль для кнопок представлений */ 
+    width: 520px;
+    height: 50px;
+    font-family: Kreadon;
+    font-size: 18px;
+    background-color: white;
+    cursor: pointer;
+}
+
+table {
+    border-collapse: collapse;
+    margin-bottom: 20px;
+    width: 100%;
+    background-color: white;
+}
+
+table th, table td {
+    border: 1px solid #ccc;
+    padding: 8px;
+    text-align: left;
+}
+
+table th {
+    background-color: #f5f5f5;
+}
